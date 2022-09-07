@@ -17,7 +17,7 @@ public class TesteInvoice {
         System.out.println("Número do Item Faturado: "+invoice1.getNumeroItemFaturado());
         System.out.println("Descrição: "+invoice1.getDescricaoItemFaturado());
         System.out.println("Quantidade: "+invoice1.getQuantidadeComprada());
-        System.out.println("Preço unt: "+invoice1.getPrecoUnitario());
+        System.out.println("Preço unitário: "+invoice1.getPrecoUnitario());
         System.out.println("Valor Total: "+invoice1.getInvoiceAmount());
     }
 }

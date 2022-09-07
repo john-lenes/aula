@@ -50,6 +50,19 @@ public class TesteInvoice {
             vet[contador] = p1;
         }
 
+        //////LISTAR PRODUTOS//////
+        System.out.println("\nLista Produto(s):");
+        for (int contador = 0; contador < vet.length; contador = contador + 1) {
+
+            Invoice p1 = vet[contador];
+            System.out.printf("Código do produto: %d", p1.getNumeroItemFaturado());
+            System.out.printf("\nDescrição do item: %s", p1.getDescricaoItemFaturado());
+            System.out.printf("\nQuantidade item comprada: %d", p1.getQuantidadeItemComprada());
+            System.out.printf("\nPreço unitário do item: %.2f", p1.getPrecoUnitario());
+            System.out.printf("\nValor total do item faturado: %.2f", p1.getInvoiceAmount());
+            System.out.println("\n");
+        }
+
         //////BUSCAR ITEM//////
         System.out.println("\nDigite o código do produto que deseja buscar:");
         Integer numeroItemBuscar = ler.nextInt();
@@ -80,18 +93,7 @@ public class TesteInvoice {
             System.out.println("Produto não encontrado!!!");
         }
 
-        //////LISTAR RELATÓRIO PRODUTOS//////
-        System.out.println("\n\nRelatório Produtos:");
-        for (int contador = 0; contador < vet.length; contador = contador + 1) {
 
-            Invoice p1 = vet[contador];
-            System.out.printf("Código do produto: %d", p1.getNumeroItemFaturado());
-            System.out.printf("\nDescrição do item: %s", p1.getDescricaoItemFaturado());
-            System.out.printf("\nQuantidade item comprada: %d", p1.getQuantidadeItemComprada());
-            System.out.printf("\nPreço unitário do item: %.2f", p1.getPrecoUnitario());
-            System.out.printf("\nValor total do item faturado: %.2f", p1.getInvoiceAmount());
-            System.out.println("\n");
-        }
     }
 }
 

@@ -1,7 +1,7 @@
 public class Invoice {
     private Integer numeroItemFaturado;
     private String descricaoItemFaturado;
-    private Integer quantidadeComprada;
+    private Integer quantidadeItemComprada;
     private Double precoUnitario;
 
     public Invoice(
@@ -9,18 +9,19 @@ public class Invoice {
             String descricaoItemFaturadoRecebida,
             Integer quantidadeCompradaRecebida,
             Double precoUnitarioRecebido
-    ) {
-
+    )
+        {
         this.numeroItemFaturado = numeroItemFaturadoRecebido;
         this.descricaoItemFaturado = descricaoItemFaturadoRecebida;
 
-        if(quantidadeCompradaRecebida <0 ){
-            this.quantidadeComprada = 0;
-        } else {
-            this.quantidadeComprada = quantidadeCompradaRecebida;
+        if(quantidadeCompradaRecebida < 0 ){
+            this.quantidadeItemComprada = 0;
+        }
+        else {
+            this.quantidadeItemComprada = quantidadeCompradaRecebida;
         }
 
-        if(precoUnitarioRecebido <0 ){
+        if(precoUnitarioRecebido < 0 ){
             this.precoUnitario = 0.0;
         } else {
             this.precoUnitario = precoUnitarioRecebido;
@@ -43,11 +44,11 @@ public class Invoice {
         this.descricaoItemFaturado = descricaoItemFaturado;
     }
 
-    public Integer getQuantidadeComprada() {
-        return quantidadeComprada;
+    public Integer getQuantidadeItemComprada() {
+        return quantidadeItemComprada;
     }
-    public void setQuantidadeComprada(Integer quantidadeComprada) {
-        this.quantidadeComprada = quantidadeComprada;
+    public void setQuantidadeItemComprada(Integer quantidadeItemComprada) {
+        this.quantidadeItemComprada = quantidadeItemComprada;
     }
 
     public Double getPrecoUnitario() {
@@ -58,7 +59,7 @@ public class Invoice {
     }
 
     public Double getInvoiceAmount() {
-        return this.quantidadeComprada * this.precoUnitario;
+        return this.quantidadeItemComprada * this.precoUnitario;
     }
 
 }
